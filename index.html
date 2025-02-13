@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #ffebf0;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #e6005c;
+        }
+        p {
+            font-size: 18px;
+            color: #444;
+        }
+        .heart-button {
+            display: inline-block;
+            background: #ff4d79;
+            color: white;
+            padding: 15px 25px;
+            font-size: 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+        .heart-button:hover {
+            background: #ff1a66;
+        }
+        .popup, .message-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>BooBoo dudu 2nd V Day</h1>
+        <p>I made this for u boo cause everytime its only you who makes it 💕</p>
+        <button class="heart-button" onclick="showPopup()">click me </button>
+    </div>
+
+    <div id="valentine-popup" class="popup fade-in">
+        <h2>Will You Be My Valentine? ❤️</h2>
+        <button class="heart-button" onclick="showMessagePopup()">Yes! 💖</button>
+        <button class="heart-button" onclick="showPopupAgain()">No 😢</button>
+    </div>
+
+    <div id="message-popup" class="message-popup fade-in">
+        <p> Boo advance happy booboo dudu day i love u so much , and thank u for being my valentine you are the only valentine i need for the rest of my life i love u boo boo , kissy kissy umma , yay , i hope u poud of me for doing this  💞</p>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('valentine-popup').style.display = 'block';
+        }
+
+        function showPopupAgain() {
+            alert("Wrong answer! Try again 😜");
+            showPopup();
+        }
+
+        function showMessagePopup() {
+            document.getElementById('valentine-popup').style.display = 'none';
+            document.getElementById('message-popup').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
